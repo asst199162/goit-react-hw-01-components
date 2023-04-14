@@ -1,13 +1,19 @@
-export const Statistics = ({ data }) => {
+import { Title, StatItem, StatList, Statistic } from './statistics.style';
+
+export const Statistics = ({ data, title }) => {
   return (
-    <section class="statistics">
-      <h2 class="title">Upload stats</h2>
-      {data.map(({ id, label, percentage }) => (
-        <ul key={id}>
-          <li>{label}</li>
-          <li>{percentage}</li>
-        </ul>
-      ))}
-    </section>
+    <Statistic>
+      {title && <Title>{title}</Title>}
+      <StatList>
+        {data.map(({ id, label, percentage }) => (
+          <StatItem key={id} style={{ backgroundColor: randomColor() }}>
+            <span>{label}</span>
+            <span>{percentage}</span>
+          </StatItem>
+        ))}
+      </StatList>
+    </Statistic>
   );
 };
+const randomColor = () =>
+  '#' + Math.floor(Math.random() * 16777215).toString(16);

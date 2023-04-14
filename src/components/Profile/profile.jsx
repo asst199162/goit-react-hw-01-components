@@ -1,4 +1,12 @@
-import { Avatar, Container } from './profile.style';
+import {
+  Avatar,
+  Container,
+  Item,
+  Text,
+  ItemStat,
+  AmountStat,
+  DescriptionText,
+} from './profile.style';
 
 export const ProfileCadr = ({
   user: {
@@ -11,26 +19,29 @@ export const ProfileCadr = ({
 }) => {
   return (
     <Container>
-      <div>
-        <Avatar src={avatar} alt="User avatar" className="avatar" />
-        <p>{username}</p>
-        <p>@{tag}</p>
-        <p>{location}</p>
-        <ul>
-          <li>
-            <span>Followers</span>
-            <span>{followers}</span>
-          </li>
-          <li>
-            <span>Views</span>
-            <span>{views}</span>
-          </li>
-          <li>
-            <span>Likes</span>
-            <span>{likes}</span>
-          </li>
-        </ul>
-      </div>
+      <DescriptionText>
+        <Avatar src={avatar} alt="User avatar" />
+        <Text bold l black>
+          {username}
+        </Text>
+        <Text>@{tag}</Text>
+        <Text>{location}</Text>
+      </DescriptionText>
+
+      <Item>
+        <ItemStat>
+          <AmountStat bold>Followers</AmountStat>
+          <AmountStat gray>{followers}</AmountStat>
+        </ItemStat>
+        <ItemStat>
+          <AmountStat bold>Views</AmountStat>
+          <AmountStat gray>{views}</AmountStat>
+        </ItemStat>
+        <ItemStat noLineBorder>
+          <AmountStat bold>Likes</AmountStat>
+          <AmountStat gray>{likes}</AmountStat>
+        </ItemStat>
+      </Item>
     </Container>
   );
 };
