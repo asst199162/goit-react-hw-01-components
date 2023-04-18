@@ -1,4 +1,4 @@
-import { Title, StatItem, StatList, Statistic } from './Statistics.style';
+import { Title, StatItem, StatList, Statistic } from './statistics.style';
 import PropTypes from 'prop-types';
 
 export const Statistics = ({ data, title }) => {

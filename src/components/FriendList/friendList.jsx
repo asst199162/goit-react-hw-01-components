@@ -1,4 +1,4 @@
-import { Icon, ItemList, FriendContainer } from './FriendList.style';
+import { Icon, ItemList, FriendContainer } from './friendList.style';
 import { IoAccessibility } from 'react-icons/io5';
 import PropTypes from 'prop-types';
 
