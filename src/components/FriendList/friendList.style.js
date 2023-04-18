@@ -22,5 +22,6 @@ export const Icon = styled.span`
   margin-left: 5px;
 `;
 export const FriendContainer = styled.div`
-  justify-content: center;
+  display: inline-block;
+  padding-top: ${p => p.theme.space[5]}px;
 `;

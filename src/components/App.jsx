@@ -13,7 +13,13 @@ import transactions from 'components/transactions.json';
 export const App = () => {
   return (
     <>
-      <ProfileCadr user={user} />
+      <ProfileCadr
+        username={user.username}
+        tag={user.tag}
+        location={user.location}
+        avatar={user.avatar}
+        stats={user.stats}
+      />
       <Statistics data={data} title="Upload stats" />
       <FriendList friends={friends} />
       <TransactionHistory item={transactions} />

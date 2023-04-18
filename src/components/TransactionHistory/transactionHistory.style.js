@@ -20,3 +20,9 @@ export const TableR = styled.tr`
     background-color: #e7d9b9;
   }
 `;
+
+export const TableContainer = styled.div`
+  padding-top: ${p => p.theme.space[5]}px;
+  display: flex;
+  justify-content: center;
+`;

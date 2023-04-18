@@ -1,5 +1,6 @@
 import { Icon, ItemList, FriendContainer } from './friendList.style';
 import { IoAccessibility } from 'react-icons/io5';
+import PropTypes from 'prop-types';
 
 export const FriendList = ({ friends }) => {
   return (
@@ -15,4 +16,15 @@ export const FriendList = ({ friends }) => {
       ))}
     </FriendContainer>
   );
+};
+
+FriendList.propTypes = {
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      avatar: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      isOnline: PropTypes.bool.isRequired,
+      id: PropTypes.number.isRequired,
+    }).isRequired
+  ),
 };

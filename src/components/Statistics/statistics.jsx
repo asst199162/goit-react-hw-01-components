@@ -1,4 +1,5 @@
 import { Title, StatItem, StatList, Statistic } from './statistics.style';
+import PropTypes from 'prop-types';
 
 export const Statistics = ({ data, title }) => {
   return (
@@ -17,3 +18,14 @@ export const Statistics = ({ data, title }) => {
 };
 const randomColor = () =>
   '#' + Math.floor(Math.random() * 16777215).toString(16);
+
+Statistics.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    }).isRequired
+  ).isRequired,
+  title: PropTypes.string.isRequired,
+};
