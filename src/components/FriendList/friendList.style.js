@@ -13,9 +13,6 @@ export const ItemList = styled.li`
   :first-child {
     margin-top: 0px;
   }
-  &:children {
-    margin-right: 5px;
-  }
 `;
 export const Icon = styled.span`
   color: ${p => (p.isOnline ? 'green' : 'red')};
