@@ -1,4 +1,4 @@
-import { ProfileCadr } from './Profile/Profile';
+import { ProfileCadr } from './Profile/profile';
 import user from 'components/user.json';
 
 import { Statistics } from './Statistics/Statistics';
