@@ -6,7 +6,7 @@ import {
   ItemStat,
   AmountStat,
   DescriptionText,
-} from './profile.style';
+} from './Profile.style';
 import PropTypes from 'prop-types';
 
 export const ProfileCadr = ({

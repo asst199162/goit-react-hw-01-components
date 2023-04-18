@@ -1,4 +1,4 @@
-import { Title, StatItem, StatList, Statistic } from './statistics.style';
+import { Title, StatItem, StatList, Statistic } from './Statistics.style';
 import PropTypes from 'prop-types';
 
 export const Statistics = ({ data, title }) => {
@@ -27,5 +27,5 @@ Statistics.propTypes = {
       percentage: PropTypes.number.isRequired,
     }).isRequired
   ).isRequired,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
 };

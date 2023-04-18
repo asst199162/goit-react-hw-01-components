@@ -4,7 +4,7 @@ import {
   TableData,
   TableHead,
   TableR,
-} from './transactionHistory.style';
+} from './TransactionHistory.style';
 import PropTypes from 'prop-types';
 
 export const TransactionHistory = ({ item }) => {
